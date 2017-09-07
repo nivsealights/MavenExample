@@ -21,6 +21,57 @@
             <artifactId>junit</artifactId>
             <version>4.11</version>
         </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.10</version>
+        </dependency>
 
     </dependencies>
+     <build>
+        <plugins>
+                 <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.20</version>
+              </plugin>
+             <plugin>
+                <groupId>io.sealights.on-premise.agents.plugin</groupId>
+                <artifactId>sealights-maven-plugin</artifactId>
+                <version>1.4.5</version>
+                <configuration>
+                    <token>eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL0RFVi1TaHJlZGRlci5hdXRoLnNlYWxpZ2h0cy5pby8iLCJqd3RpZCI6IkRFVi1TaHJlZGRlcixpLTAxNzE4M2EzMmIzYjQ0NGQ0LEFQSUdXLTRkNDFjOWMyLTA4ODktNGFhOS05ZTZiLWI4MDU4ODUxZTJlZiwxNTA0Nzg3MDU5ODYzIiwic3ViamVjdCI6IlNlYUxpZ2h0c0BhZ2VudCIsImF1ZGllbmNlIjpbImFnZW50cyJdLCJ4LXNsLXJvbGUiOiJhZ2VudCIsIngtc2wtc2VydmVyIjoiaHR0cHM6Ly9ERVYtU2hyZWRkZXItZ3cuZGV2LnNlYWxpZ2h0cy5jby9hcGkiLCJzbF9pbXBlcl9zdWJqZWN0IjoiIiwiaWF0IjoxNTA0Nzg3MDU5fQ.YNpUY-lzLDYvhkJxLKycSA7egk-1PxQU2snhPXzYCticogH3hDrFeI7VNaDXF0qbclXMIIvNCrJJTUkHU5zq77Ih4TBuKaSKPB0YSwpHlLfKiXT41sgJGo_fFrgBWLW-QVyi2r1PhbQ8gq5p4wsDheEG73B9Ekvp35uc_RD9qDQeUI8ZMi4TWv7_OmQUAeFsvbhe1BxATlWeDb0TIc1q68q4T0YsWO5h-Z9DbzXIL5OKIV4AhjCm1uW9cmGpVNTBya4690LC6lYPB13FK35KH9zJnukS0vgmMvRp6OJfnvlpc_GdgrsaprLEgOgcC2X4RXXNyN781UZ43mXpBVcX-T0--CFAN3-gG52u56-Orclm-t5COl9XJpQE8jcAGZBrGgtfT0EewrtyLIe4OnkH1Wg6xF4lcREajtMeGa8R25VPhoDfLijygv-xiiLMDxE_L_MgkX1Cwuy8efgeWsUfKfhQC8js_2paN_LJiVzIYTkoHl6llIVkyxfIRYmeyLcbc8-8rBDT2or858KaAGZqMiNY610_nvbeHkOOh8Yb2HGleHCKeU0inhiBitpuTQcxYU52yRq9JpO2p1sK_X31IeQHman23OPrgjD6FiOmeh7XMQItxdM9gu9QSduKhrChB34HWHE_vCZnopYZd4FEbIG1YPlSpTpUrJqU6H1wW_A</token>
+                    <customerid>Sealights</customerid>
+                    <moduleName>${project.name}</moduleName>
+                    <appName>mavenExample_niv_3</appName>
+                    <workspacepath>${project.build.outputDirectory}</workspacepath>
+                    <build>20</build>
+                    <branch>master</branch>
+                    <packagesincluded>edu.*</packagesincluded>
+                    <proxy>http://localhost:8888</proxy>
+                    <!--<filesStorage>C:\Users\Ronis\AppData\Local\Temp\</filesStorage>-->
+                    <sendContributors>true</sendContributors>
+                    <filesexcluded>*test-classes*</filesexcluded>
+                    <logEnabled>true</logEnabled>
+                    <logLevel>INFO</logLevel>  
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>a1</id>
+                        <goals>
+                            <goal>build-scanner</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>a2</id>
+                        <goals>
+                            <goal>test-listener</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+
+    </build>
 </project>
