@@ -6,6 +6,7 @@ public class AdditionDoubler implements IntegerDoubler {
 
   @Override
   public long doDouble(int i) {
+    int a = 5;
     return i + i;
   }
 }
