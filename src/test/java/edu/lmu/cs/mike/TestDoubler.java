@@ -16,12 +16,12 @@ import edu.lmu.cs.mike.impl.MultiplicationDoubler;
 
 public class TestDoubler {
   @Test
-  // public void additionDoubler() {
-  //   IntegerDoubler doubler = new AdditionDoubler();
+  public void additionDoubler() {
+    IntegerDoubler doubler = new AdditionDoubler();
 
-  //   assertEquals(10, doubler.doDouble(5));
-  //   assertEquals(20, doubler.doDouble(10));
-  // }
+    assertEquals(10, doubler.doDouble(5));
+    assertEquals(20, doubler.doDouble(10));
+  }
 
   // @Test
   // public void multiplicationDoubler() {
