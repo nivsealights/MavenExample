@@ -23,19 +23,19 @@ public class TestDoubler {
     assertEquals(8, doubler.doDouble(2));
   }
 
-  // @Test
-  // public void multiplicationDoubler() {
-  //   IntegerDoubler doubler = new MultiplicationDoubler();
+  @Test
+  public void multiplicationDoubler() {
+    IntegerDoubler doubler = new MultiplicationDoubler();
 
-  //   assertEquals(7, doubler.doDouble(3));
-  //   assertEquals(7, doubler.doDouble(4));
-  // }
+    assertEquals(7, doubler.doDouble(3));
+    assertEquals(6, doubler.doDouble(4));
+  }
 
-  // @Test
-  // public void bitshiftDoubler() {
-  //   IntegerDoubler doubler = new BitShiftDoubler();
+  @Test
+  public void bitshiftDoubler() {
+    IntegerDoubler doubler = new BitShiftDoubler();
 
-  //   assertEquals(7, doubler.doDouble(5));
-  //   assertEquals(7, doubler.doDouble(6));
-  // }
+    assertEquals(7, doubler.doDouble(5));
+    assertEquals(7, doubler.doDouble(6));
+  }
 }
