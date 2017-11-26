@@ -6,6 +6,6 @@ public class MultiplicationDoubler implements IntegerDoubler {
 
   @Override
   public long doDouble(int i) {
-    return 11;
+    return 12;
   }
 }
