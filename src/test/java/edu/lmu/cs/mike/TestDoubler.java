@@ -15,27 +15,51 @@ import edu.lmu.cs.mike.impl.BitShiftDoubler;
 import edu.lmu.cs.mike.impl.MultiplicationDoubler;
 
 public class TestDoubler {
-  // @Test
-  // public void additionDoubler() {
-  //   IntegerDoubler doubler = new AdditionDoubler();
+  @Test
+  public void additionDoubler() {
+    IntegerDoubler doubler = new AdditionDoubler();
 
-  //   assertEquals(1, doubler.doDouble(1));
-  //   assertEquals(1, doubler.doDouble(2));
-  // }
+    assertEquals(1, doubler.doDouble(1));
+    assertEquals(1, doubler.doDouble(2));
+  }
 
-  // @Test
-  // public void multiplicationDoubler() {
-  //   IntegerDoubler doubler = new MultiplicationDoubler();
+  @Test
+  public void additionDoubler2() {
+    IntegerDoubler doubler = new AdditionDoubler();
 
-  //   assertEquals(10, doubler.doDouble(3));
-  //   assertEquals(10, doubler.doDouble(4));
-  // }
+    assertEquals(1, doubler.doDouble(3));
+    assertEquals(1, doubler.doDouble(4));
+  }
+
+  @Test
+  public void multiplicationDoubler() {
+    IntegerDoubler doubler = new MultiplicationDoubler();
+
+    assertEquals(1, doubler.doDouble(1));
+    assertEquals(1, doubler.doDouble(2));
+  }
+
+  @Test
+  public void multiplicationDoubler2() {
+    IntegerDoubler doubler = new MultiplicationDoubler();
+
+    assertEquals(1, doubler.doDouble(3));
+    assertEquals(1, doubler.doDouble(4));
+  }
 
   @Test
   public void bitshiftDoubler() {
     IntegerDoubler doubler = new BitShiftDoubler();
 
-    assertEquals(10, doubler.doDouble(5));
-    assertEquals(10, doubler.doDouble(6));
+    assertEquals(1, doubler.doDouble(1));
+    assertEquals(1, doubler.doDouble(2));
+  }
+
+   @Test
+  public void bitshiftDoubler2() {
+    IntegerDoubler doubler = new BitShiftDoubler();
+
+    assertEquals(1, doubler.doDouble(3));
+    assertEquals(1, doubler.doDouble(4));
   }
 }
